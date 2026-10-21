@@ -1,0 +1,324 @@
+
+/* ==================================
+   GENERAL PAGE DESIGN
+================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F6F3FC;
+  color: #231942;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==================================
+   MAIN CONTAINER
+================================== */
+
+.container {
+  width: 760px;
+  max-width: calc(100% - 32px);
+  margin: 60px auto 80px;
+}
+
+/* ==================================
+   REUSABLE WHITE CARDS
+================================== */
+
+.card-white {
+  background-color: #FFFFFF;
+
+  padding: 48px 50px;
+  margin-bottom: 32px;
+
+  border: 1px solid #ECE6F7;
+  border-radius: 20px;
+
+  box-shadow: 0 12px 35px rgba(35, 25, 66, 0.08);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* CARD HOVER EFFECT */
+
+.card-white:hover {
+  transform: translateY(-6px);
+
+  border-color: #C4B5FD;
+
+  box-shadow: 0 22px 50px rgba(139, 92, 246, 0.18);
+}
+
+/* CARD CLICK EFFECT */
+
+.card-white:active {
+  transform: translateY(-2px) scale(0.995);
+}
+
+/* ==================================
+   REUSABLE TEXT ALIGNMENT
+================================== */
+
+.text-center {
+  text-align: center;
+}
+
+/* ==================================
+   TYPOGRAPHY
+================================== */
+
+h1, h2, h3 {
+  font-family: "Inter", sans-serif;
+  color: #231942;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 42px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.2;
+  margin-bottom: 28px;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p {
+  color: #665A82;
+  font-size: 15px;
+  line-height: 1.9;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ==================================
+   PROFILE PICTURE
+================================== */
+
+/* Unique image adjustments */
+
+#profile-picture {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  margin: 0 auto 28px;
+}
+
+/* Reusable circular image design */
+
+.img-circle {
+  border-radius: 50%;
+}
+
+/* Reusable image shadow */
+
+.img-shadowed {
+  border: 4px solid #F0E8FF;
+
+  box-shadow: 0 12px 28px rgba(139, 92, 246, 0.18);
+}
+
+/* ==================================
+   LINKS
+================================== */
+
+a {
+  color: #8B5CF6;
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #D946EF;
+}
+
+/* ==================================
+   REUSABLE PURPLE BUTTON
+================================== */
+
+.btn-purple {
+  display: inline-block;
+
+  background: linear-gradient(135deg, #8B5CF6, #D946EF);
+
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: 700;
+
+  padding: 15px 28px;
+  border-radius: 12px;
+
+  box-shadow: 0 10px 25px rgba(139, 92, 246, 0.22);
+}
+
+.btn-purple:hover {
+  color: #FFFFFF;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 16px 32px rgba(139, 92, 246, 0.35);
+}
+
+/* ==================================
+   INTRODUCTION SPECIFIC SPACING
+================================== */
+
+#introduction {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+
+/* Descendant selector */
+
+#introduction p {
+  margin-bottom: 30px;
+}
+
+/* Specific button spacing */
+
+#introduction .btn-purple {
+  margin-top: 5px;
+}
+
+/* ==================================
+   REUSABLE TAG DESIGN
+================================== */
+
+.tag {
+  display: inline-block;
+
+  background-color: #F0E8FF;
+  color: #7542CA;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+
+  padding: 7px 15px;
+  border-radius: 50px;
+
+  margin-bottom: 22px;
+}
+
+/* ==================================
+   HORIZONTAL SOCIAL LIST
+================================== */
+
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin: 22px 0 0;
+}
+
+/* Direct child selector */
+
+.list-inline > li {
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* Social link design */
+
+.list-inline a {
+  display: inline-block;
+
+  background-color: #F5F0FF;
+  color: #7542CA;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  padding: 12px 22px;
+
+  border: 1px solid #E8DCFF;
+  border-radius: 50px;
+}
+
+.list-inline a:hover {
+  background-color: #8B5CF6;
+  color: #FFFFFF;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 10px 22px rgba(139, 92, 246, 0.20);
+}
+
+/* KEYBOARD ACCESSIBILITY */
+
+a:focus-visible {
+  outline: 3px solid #7542CA;
+  outline-offset: 4px;
+}
+
+/* ==================================
+   RESPONSIVE DESIGN
+================================== */
+
+@media (max-width: 600px) {
+
+  .container {
+    margin: 25px auto 50px;
+  }
+
+  .card-white {
+    padding: 32px 24px;
+    margin-bottom: 22px;
+  }
+
+  #introduction {
+    padding: 38px 24px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 23px;
+  }
+
+}
+
+/* REDUCED MOTION ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .card-white,
+  a {
+    transition: none;
+  }
+
+  .card-white:hover,
+  .card-white:active,
+  .btn-purple:hover,
+  .list-inline a:hover {
+    transform: none;
+  }
+
+}
